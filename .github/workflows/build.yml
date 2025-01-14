@@ -1,6 +1,7 @@
 name: Publish sing-box-windows to Release
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*' # 触发规则：推送以 'v' 开头的标签时执行
