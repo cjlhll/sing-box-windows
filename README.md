@@ -29,7 +29,8 @@
 ./winsw.exe -h
 ```
 
-执行 `start.bat` 脚本启动
+执行 `start.bat` 脚本启动，以后开机会自启动<br>
+执行 `stop.bat` 脚本停止
 
 ```
 2024-02-07 11:34:16,941 DEBUG - Starting WinSW in console mode
