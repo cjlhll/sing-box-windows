@@ -1,49 +1,36 @@
-name: Publish sing-box-windows to Release
+name: Release Current Repo
 
 on:
-  workflow_dispatch:
   push:
     tags:
-      - 'v*' # 触发规则：推送以 'v' 开头的标签时执行
+      - 'v*' # 监听以 'v' 开头的 tag 推送
 
 jobs:
   release:
     runs-on: ubuntu-latest
 
     steps:
-    # 检出代码
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v3
 
-    # 设置 Node.js 环境（如果需要，可根据你的项目调整）
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
+    - name: Zip files
+      run: zip -r repo-files.zip .
 
-    # 创建 ZIP 压缩包并命名为 sing-box-windows
-    - name: Archive files
-      run: zip -r sing-box-windows.zip ./*
-
-    # 创建 Release
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
         tag_name: ${{ github.ref_name }}
-        release_name: ${{ github.ref_name }}
-        body: |
-          发布说明：自动发布的 sing-box-windows 版本。
+        release_name: Release ${{ github.ref_name }}
         draft: false
         prerelease: false
+        generate_release_notes: true
+        token: ${{ secrets.GITHUB_TOKEN }}
 
-    # 上传 sing-box-windows.zip 到 Release
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./sing-box-windows.zip
-        asset_name: sing-box-windows.zip
+        asset_path: ./repo-files.zip
+        asset_name: repo-files.zip
         asset_content_type: application/zip
