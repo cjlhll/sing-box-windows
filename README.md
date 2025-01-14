@@ -1,6 +1,6 @@
 
 # 可以用winsw.exe配置sing-box.exe到开机服务里面 感谢此[文档](https://homing.so/blog/proxy/sing-box-on-windows)
-
+<br><br><br><br>
 ## 下载本项目后，文件夹改名为 `sing-box` 放到D盘根目录
 
 ### 配置 sing-box 服务
@@ -31,8 +31,8 @@
 ./winsw.exe -h
 ```
 
-执行 `start.bat` 脚本启动，以后开机会自启动<br>
-执行 `stop.bat` 脚本停止
+## 执行 `start.bat` 脚本启动，以后开机会自启动<br>
+## 执行 `stop.bat` 脚本停止
 
 ```
 2024-02-07 11:34:16,941 DEBUG - Starting WinSW in console mode
