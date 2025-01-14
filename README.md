@@ -1,6 +1,8 @@
 
 # 可以用winsw.exe配置sing-box.exe到开机服务里面 感谢此[文档](https://homing.so/blog/proxy/sing-box-on-windows)
 
+## 下载本项目后，文件夹改名为 `sing-box` 放到D盘根目录
+
 ### 配置 sing-box 服务
 
 编辑 `winsw.xml`，写入自己转换好的订阅连接：
@@ -10,7 +12,7 @@
   <name>sing-box</name>
   <description>This service runs sing-box continuous integration system.</description>
   <download from="https://你的订阅链接" to="%BASE%\config.json" auth="sspi" />
-  <executable>C:\Users\homin\scoop\shims\sing-box.exe</executable>
+  <executable>D:\sing-box\sing-box.exe</executable>
   <arguments>run</arguments>
   <log mode="reset" />
   <onfailure action="restart" />
