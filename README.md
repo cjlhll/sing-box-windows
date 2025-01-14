@@ -3,7 +3,7 @@
 
 ### 配置 sing-box 服务
 
-编辑 `winsw.xml`，写入自己的订阅连接：
+编辑 `winsw.xml`，写入自己转换好的订阅连接：
 ```
 <service>
   <id>sing-box</id>
