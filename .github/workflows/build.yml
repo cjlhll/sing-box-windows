@@ -1,6 +1,7 @@
 name: Release Current Repo
 
 on:
+  workflow_dispatch: # 手动触发支持
   push:
     tags:
       - 'v*' # 监听以 'v' 开头的 tag 推送
