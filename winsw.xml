@@ -2,7 +2,7 @@
   <id>sing-box</id>
   <name>sing-box</name>
   <description>This service runs sing-box continuous integration system.</description>
-  <download from="https://v1.mk/Fh5GDJN" to="%BASE%\config.json" auth="sspi" />
+  <download from="订阅地址" to="%BASE%\config.json" auth="sspi" />
   <executable>D:\sing-box\sing-box.exe</executable>
   <arguments>run</arguments>
   <log mode="reset" />

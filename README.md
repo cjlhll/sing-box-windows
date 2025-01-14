@@ -1,17 +1,9 @@
-### 两种执行方法
-# 1、可以用winsw.exe配置sing-box.exe到开机服务里面 感谢此[文档](https://homing.so/blog/proxy/sing-box-on-windows)
-```
-# 如果你使用 Scoop
-scoop install sing-box
-# 如果你使用 Chocolatey
-choco install sing-box
-```
+
+# 可以用winsw.exe配置sing-box.exe到开机服务里面 感谢此[文档](https://homing.so/blog/proxy/sing-box-on-windows)
+
 ### 配置 sing-box 服务
-如果每次使用 sing-box 都得打开 terminal 的话也太烦人，所以最好是将它配置成一个 Windows 的服务，这样我们就不用每次重启还要手动运行了，把这些工作都交给 Windows！为了实现这个目的，我们要用到 [WinSW](https://github.com/winsw/winsw)，这是一个可以将任何可执行文件配置成 Windows 服务的工具。
 
-先创建一个目录，这里我的目录就叫 `sing-box`，然后下载 [WinSW-x64.exe](https://github.com/winsw/winsw/releases/tag/v2.12.0)，放到这个目录并将其重命名为：`winsw.exe`。然后我们创建一个 `winsw.xml`，通过这个文件对 sing-box 进行配置。注意！这两个文件的名字一定要相同，否则 WinSW 将无法读取到配置文件。
-
-然后编辑 winsw.xml，写入以下内容：
+编辑 `winsw.xml`，写入自己的订阅连接：
 ```
 <service>
   <id>sing-box</id>
@@ -37,7 +29,7 @@ choco install sing-box
 ./winsw.exe -h
 ```
 
-现在使用：`./winsw.exe install` 安装服务，安装完成后系统每次重启都会自动运行 sing-box，但是现在我们先用 `./winsw.exe start` 来启动服务，你将会在当前目录下看到 `winsw.wrapper.log` 文件，这个文件包含服务启动时的日志，如果一切正常，那么日志应该是这样：
+执行 `start.bat` 脚本启动
 
 ```
 2024-02-07 11:34:16,941 DEBUG - Starting WinSW in console mode
@@ -54,7 +46,3 @@ choco install sing-box
 而目录中的 `winsw.out.log` 保存了 sing-box 运行时产生的日志。
 
 到这里，我们已经实现了在 Windows 上无感使用 sing-box，并且实现自动更新订阅。
-
-
-# 2、可以用start.bat 手动执行
-直接以`管理员模式` 运行 `start.bat`
