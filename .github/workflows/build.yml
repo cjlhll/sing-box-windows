@@ -26,7 +26,7 @@ jobs:
         draft: false
         prerelease: false
         generate_release_notes: true
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GH_TOKEN }}
 
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
