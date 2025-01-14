@@ -1,5 +1,5 @@
 ### 两种执行方法
-# 可以用winsw.exe配置sing-box.exe到开机服务里面 [文档](https://homing.so/blog/proxy/sing-box-on-windows)
+# 1、可以用winsw.exe配置sing-box.exe到开机服务里面 感谢此[文档](https://homing.so/blog/proxy/sing-box-on-windows)
 ```
 # 如果你使用 Scoop
 scoop install sing-box
@@ -54,5 +54,7 @@ choco install sing-box
 而目录中的 `winsw.out.log` 保存了 sing-box 运行时产生的日志。
 
 到这里，我们已经实现了在 Windows 上无感使用 sing-box，并且实现自动更新订阅。
-# 可以用start.bat 手动执行
 
+
+# 2、可以用start.bat 手动执行
+直接以`管理员模式` 运行 `start.bat`
