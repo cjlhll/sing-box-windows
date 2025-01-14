@@ -1,0 +1,14 @@
+2025-01-14 11:33:23,997 DEBUG - Starting WinSW in console mode
+2025-01-14 11:33:31,023 DEBUG - Starting WinSW in console mode
+2025-01-14 11:33:34,526 DEBUG - Starting WinSW in console mode
+2025-01-14 11:33:34,559 INFO  - Installing service 'sing-box (sing-box)'...
+2025-01-14 11:33:34,597 INFO  - Service 'sing-box (sing-box)' was installed successfully.
+2025-01-14 11:33:41,997 DEBUG - Starting WinSW in console mode
+2025-01-14 11:33:43,814 DEBUG - Starting WinSW in console mode
+2025-01-14 11:33:43,851 INFO  - Starting service 'sing-box (sing-box)'...
+2025-01-14 11:33:44,327 DEBUG - Starting WinSW in service mode
+2025-01-14 11:33:44,384 INFO  - Service 'sing-box (sing-box)' started successfully.
+2025-01-14 11:33:44,432 INFO  - Downloading: https://v1.mk/Fh5GDJN to D:\sing-box\config.json. failOnError=False
+2025-01-14 11:33:53,095 INFO  - Starting D:\sing-box\sing-box.exe run
+2025-01-14 11:33:53,567 INFO  - Started process 20768
+2025-01-14 11:33:53,593 DEBUG - Forwarding logs of the process System.Diagnostics.Process (sing-box) to WinSW.ResetLogAppender
