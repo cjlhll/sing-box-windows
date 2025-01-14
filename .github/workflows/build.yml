@@ -21,14 +21,6 @@ jobs:
       with:
         node-version: '16'
 
-    # 安装依赖（如果需要，可根据项目调整）
-    - name: Install dependencies
-      run: npm install
-
-    # 打包项目内容（如果需要构建，请自定义这部分）
-    - name: Build project
-      run: npm run build
-
     # 创建 ZIP 压缩包并命名为 sing-box-windows
     - name: Archive files
       run: zip -r sing-box-windows.zip ./*
